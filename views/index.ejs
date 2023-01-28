@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >User list</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <button class="button">
+      <a href="/users">Novo Usu&aacute;rio</a>
+    </button>
+    <h1 class="text-center title-1">Lista de Usu&aacute;rios</h1>
+    <ul>
+      <% docs.forEach((user)=>{ %>
+        <li>
+          <a href="mailto:<%= user.email %>">
+            <%= user.username %>
+          </a>
+        </li>
+      <%})%>
+    </ul>
+  </body>
+</html>
